@@ -34,7 +34,8 @@ public class MecanumDriveChasis {
 
 
         FrontLeftMotor.setDirection(DcMotor.Direction.REVERSE);
-        BackLeftMotor.setDirection(DcMotor.Direction.REVERSE);
+        BackLeftMotor.setDirection(DcMotor.Direction.FORWARD);
+        BackRightMotor.setDirection(DcMotor.Direction.REVERSE);
 
 
         FrontLeftMotor.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
@@ -49,7 +50,7 @@ public class MecanumDriveChasis {
 
         RevHubOrientationOnRobot RevOrientation = new RevHubOrientationOnRobot(
 
-                RevHubOrientationOnRobot.LogoFacingDirection.UP,
+                RevHubOrientationOnRobot.LogoFacingDirection.RIGHT,
                 RevHubOrientationOnRobot.UsbFacingDirection.FORWARD);
 
         imu.initialize(new IMU.Parameters(RevOrientation));

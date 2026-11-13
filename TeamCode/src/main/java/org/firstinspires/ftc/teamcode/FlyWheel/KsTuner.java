@@ -1,33 +1,35 @@
 package org.firstinspires.ftc.teamcode.FlyWheel;
 
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
 
 @TeleOp
-public class KsTuner extends LinearOpMode {
+@Disabled
+public class KsTuner extends OpMode {
 
     flyWheelmain flywheel = new flyWheelmain();
 
-    public static double kS = 0;
+    public static double kS = 0.17;
 
-    double[] increments = {0.000001, 0.00001, 0.0001, 0.001, 0.01}
+    double[] increments = {0.000001, 0.00001, 0.0001, 0.001, 0.01};
 
     int incrementsIdx = 4;
 
     @Override
-    public void runOpMode(){
+    public void init(){
 
         flywheel.init(hardwareMap);
 
     }
 
-    public void waitForStart();
 
+    @Override
+    public void loop() {
 
-    while  (opModeIsActive()){
-
-        if(gamepad1.dpadRightWasPressed() && incrementsIdx < 4){
+    if(gamepad1.dpadRightWasPressed() && incrementsIdx < 4){
             incrementsIdx++;
         } else if (gamepad1.dpadLeftWasPressed() && incrementsIdx > 0) {
             incrementsIdx--;

@@ -3,5 +3,7 @@ package org.firstinspires.ftc.teamcode.OpModes;
 
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 
-public class AutonomousModeMain extends OpMode {
+public class AutonomousModeMain {
+
+
 }

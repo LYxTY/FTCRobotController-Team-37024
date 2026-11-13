@@ -11,7 +11,7 @@ public class flyWheelmain {
 
     private double encoderCPM = 28; // Must Modify this using our motor encoderCPM (on the motor)
 
-    private double kV, kS, kP;
+    private double kV, kS = 0.17, kP;
 
     private double gearRatio = 1; // Modify this based on what gear ratio do we have on motors
 
